@@ -342,27 +342,38 @@ Let’s see the power of the knowledge store in action. When you ran the  _Impor
 
 
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --------
 --------
 ## 3. Compartilhe conosco o link desse repositório através do botão 'entregar projeto'  
+Antes de finalizar o desafio, uma providência importate é limpar (Clean up) o Language Studio, deletando os recrusos para não gerar custos desnecessários.
+
+### **Clean up**  
+Como é recomendado na documentção, senão se pretende fazer mais exercícios, excluir todos os recursos que não precisa mais. Isso evita acumular custos desnecessários.  
+‑
+>    1. Abra o portal do Azure (<https://portal.azure.com/>) e selecione o grupo de recursos que contém o recurso que você criou.  
+>    2. Selecione o recurso e selecione Excluir e depois Sim para confirmar. O recurso é então excluído.
+>
+>>  - **Observação:** Uma curiosidade que, nesta etapa, a plataforma informou que não houve consumo de recursos, restando ainda um crédito de R$ 988,18, na assinatura gratuita. Foi a mesma posição do último desafio no Azura, Vision Studio: Detect faces; Read text; e, Analyze images.  
+
+Após completar o Desafio, fiz a atualização no repositório local com o comando git pull.  
+
+>- No repositório local;  
+>  Clica no botão direito do mouse; e
+>- Opção: "Open Git Bash here"
+> No terminal digita o comando Git Pull <endereço do repositório remoto>
+
+~~~bash
+$ git pull https://github.com/z3mafra/language-studio.git
+~~~
+
+### **Postar link do repositório**
+Como é recomendado na documentção, senão se pretende fazer mais exercícios, excluir todos os recursos que não precisa mais. Isso evita acumular custos desnecessários.  
+>    1. Abra o portal da DIO (<https://www.dio.me/>), com as credenciais e selecione o [Bootcamp Microsoft AZure AI Fundamentals](https://web.dio.me/track/microsoft-azure-ai-fundamentals).
+>    2. Entra na Atividade Desafio de projeto: "Reconhecimento Facial e transformação de imagens em Dados no Azure ML"
+>    3. Clica no botão "ENTREGAR PROJETO" 
+>    4. Cola o link do projeto na caixa de texto "Repositório do Projeto"; Cola a descrição do repositório; Ler e marcar o Check box "Termos de uso", concordando com os termos o recurso; e,
+>    5. Selecione Entregar. O Desafio é então entregue.
+>
 
 --------
 --------
