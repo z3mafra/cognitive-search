@@ -1,17 +1,18 @@
 # cognitive-search  
 cognitive-search  
 
-> 1. Crie um novo repositório no github com um nome a sua preferência  
-> 2. Crie um arquivo readme.md descrevendo o passo a passo para se configurar uma pesquisa, assim como seus insights, possibilidades de ferramentas que se beneficiam com esse tipo de ferramenta e aprendizados adquiridos durante o processo.
+> 1. Criar um novo repositório no github com um nome a sua preferência  
+> 2. Descrever o passo a passo para se configurar uma pesquisa, no arquivo readme.md  
 >> 2.1. Criar recursos do Azure  
->> 2.2. Extrair dados de uma fonte de dados  
->> 2.3. Enriqueça os dados com habilidades de IA: Use o indexador no portal do Azure  
->> 2.4. Consulte seu índice de pesquisa  
->> 2.5. Revise os resultados salvos em uma Loja de conhecimento  
-> 3. Compartilhe conosco o link desse repositório através do botão 'entregar projeto'  
-
+>> 2.2. Extrair dados de uma fonte  
+>> 2.3. Enriquecer os dados com habilidades de IA: indexador no portal do Azure  
+>> 2.4. Consulta ao índice de pesquisa  
+>> 2.5. Revisão dos resultados salvos
+>> 2.6. Insights e Possibilidades  
+> 3. Fnalizar e Compartilhar o link do repositório  
+>> 
 --------
-## 1. Crie um novo repositório no github com um nome a sua preferência  
+## 1. Criar um novo repositório no github com um nome a sua preferência  
 
 Na maquina local foi crido o diretório 'cognitive-search'  
 
@@ -38,7 +39,7 @@ No GitHub foi criado o repositório cognitive-search
 > 
 
 -------
-## 2. Crie um arquivo readme.md descrevendo o passo a passo para se configurar uma pesquisa, assim como seus insights, possibilidades de ferramentas que se beneficiam com esse tipo de ferramenta e aprendizados adquiridos durante o processo.  
+## 2. Descrever o passo a passo para se configurar uma pesquisa, no arquivo readme.md    
 
 --------
 ### 2.1. Criar recursos do Azure  
@@ -95,7 +96,7 @@ The solution you’ll create for Fourth Coffee requires the following resources 
 >    - Change the setting for Allow Blob anonymous access to Enabled and then select Save.  
   
 --------
-### 2.2. Extrair dados de uma fonte de dados  
+### 2.2. Extrair dados de uma fonte  
 > ## Upload Documents to Azure Storage
 
 1.  In the left-hand menu pane, select  **Containers**.
@@ -123,7 +124,7 @@ The solution you’ll create for Fourth Coffee requires the following resources 
 8.  After the upload is complete, you can close the  **Upload blob**  pane. Your documents are now in your  _coffee-reviews_  storage container.
 
 --------
-### 2.3. Enriqueça os dados com habilidades de IA: Use o indexador no portal do Azure  
+### 2.3. Enriquecer os dados com habilidades de IA: indexador no portal do Azure  
 
 After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an  _Import data wizard_. With this wizard, you can automatically create an index and indexer for supported data sources. You’ll use the wizard to create an index, and import your search documents from storage into the Azure AI Search index.
 
@@ -222,7 +223,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
     
 --------
-### 2.4. Consulte seu índice de pesquisa 
+### 2.4. Consulta ao índice de pesquisa 
 
 Use the Search explorer to write and test queries. Search explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search explorer to write queries and review results in JSON.
 
@@ -300,7 +301,7 @@ CodeCopy
 
 
 --------
-### 2.5. Revise os resultados salvos em uma Loja de conhecimento 
+### 2.5. Revisão dos resultados salvos  
 
 
 Let’s see the power of the knowledge store in action. When you ran the  _Import data wizard_, you also created a knowledge store. Inside the knowledge store, you’ll find the enriched data extracted by AI skills persists in the form of projections and tables.
@@ -337,12 +338,22 @@ Let’s see the power of the knowledge store in action. When you ran the  _Impor
     
     Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
 
+--------
+### 2.6. Insights e Possibilidades  
+
+>> O Processamento de Linguagem Natural (PNL) é fundamental para compreender e interagir com a linguagem escrita e falada, possibilitando a extração de significado semântico e a formulação de respostas em linguagem natural.  
+>> Agências de Viagens, entre outros serviçoes, podem usar o Azure Language Studio para analisar avaliações de hotéis, identificando sentimentos e entidades mencionadas, melhorando a experiência do cliente.  
+>> O Azure Language Studio é uma ferramenta poderosa oferecida pela Microsoft para análise de texto e compreensão de linguagem natural. Uma das aplicações mais significativas do Language Studio é a análise de sentimentos, onde ele pode ser utilizado para determinar se as avaliações de produtos, serviços ou qualquer outro tipo de conteúdo são predominantemente positivas ou negativas. Isso é essencial para empresas que desejam entender o feedback dos clientes e a reputação de sua marca. Ao empregar técnicas de processamento de linguagem natural avançadas, o Language Studio é capaz de identificar nuances no texto, capturando não apenas palavras-chave, mas também o contexto e o tom geral das avaliações.  
+>> Através do uso de algoritmos de aprendizado de máquina e modelos de linguagem pré-treinados, o Language Studio é capaz de analisar grandes volumes de avaliações de forma rápida e eficiente. Ele pode detectar palavras e frases que indicam sentimentos positivos ou negativos, levando em consideração aspectos como sarcasmo, ironia e ambiguidade. Isso permite uma avaliação mais precisa e detalhada do sentimento expresso no texto, proporcionando insights valiosos para as empresas.  
+>> Uma das vantagens do Azure Language Studio é sua capacidade de personalização. As empresas podem ajustar os modelos de análise de sentimento de acordo com suas necessidades específicas e o domínio de seu negócio. Isso permite uma análise mais precisa e relevante das avaliações, levando em consideração termos e expressões específicas da indústria ou do público-alvo. Além disso, o Language Studio oferece integração com outras ferramentas e serviços do Azure, permitindo uma implementação suave em diferentes sistemas e plataformas.  
+>> No entanto, é importante reconhecer que nenhuma ferramenta de análise de sentimento é perfeita. O Azure Language Studio pode enfrentar desafios ao lidar com textos complexos ou ambíguos, onde o contexto pode influenciar significativamente o sentimento expresso. Além disso, como qualquer tecnologia baseada em machine learning, o desempenho do Language Studio pode variar dependendo da qualidade dos dados de treinamento e das configurações específicas utilizadas. Portanto, é fundamental complementar a análise automatizada com revisão humana e outras formas de feedback para obter uma compreensão abrangente das avaliações.  
+>> Um outro aspecto importante, que também deve ser consdierado, é a integração dessas ferramentas com os ambientes de navegação na internet, tais como plataformas, sites e aplicativos.  
 
 
 
 --------
 --------
-## 3. Compartilhe conosco o link desse repositório através do botão 'entregar projeto'  
+## 3. Fnalizar e Compartilhar o link do repositório  
 Antes de finalizar o desafio, uma providência importate é limpar (Clean up) o Language Studio, deletando os recrusos para não gerar custos desnecessários.
 
 ### **Clean up**  
