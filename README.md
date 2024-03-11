@@ -70,9 +70,32 @@ The solution you’ll create for Fourth Coffee requires the following resources 
 --------
 ### 2.1.2. Create an Azure AI services resource  
 
+>    - You’ll need to provision an Azure AI services resource that’s in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.  
+>    - Return to the home page of the Azure portal. Click the ＋Create a resource button and search for Azure AI services. Select create an Azure AI services plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:  
+>      - Subscription: Your Azure subscription.  
+>      - Resource group: The same resource group as your Azure AI Search resource.  
+>      - Region: The same location as your Azure AI Search resource.  
+>      - Name: A unique name.  
+>      - Pricing tier: Standard S0  
+>      - By checking this box I acknowledge that I have read and understood all the terms below: Selected  
+>    - Select Review + create. After you see the response Validation Passed, select Create.  
+>    - Wait for deployment to complete, then view the deployment details.  
+  
 --------
 ### 2.1.3. Create a storage account  
-
+  
+>    - Return to the home page of the Azure portal, and then select the + Create a resource button.  
+>    - Search for storage account, and create a Storage account resource with the following settings:  
+>      - Subscription: Your Azure subscription.  
+>      - Resource group: The same resource group as your Azure AI Search and Azure AI services resources.  
+>      - Storage account name: A unique name.  
+>      - Location: Choose any available location.  
+>      - Performance: Standard  
+>      - Redundancy: Locally redundant storage (LRS)  
+>    - Click Review and then click Create. Wait for deployment to complete, and then go to the deployed resource.  
+>    - In the Azure Storage account you created, in the left-hand menu pane, select Configuration (under Settings).  
+>    - Change the setting for Allow Blob anonymous access to Enabled and then select Save.  
+  
 --------
 ### 2.2. Extrair dados de uma fonte de dados  
 
