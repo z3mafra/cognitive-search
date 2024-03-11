@@ -98,6 +98,31 @@ The solution you’ll create for Fourth Coffee requires the following resources 
   
 --------
 ### 2.2. Extrair dados de uma fonte de dados  
+> ## Upload Documents to Azure Storage
+
+1.  In the left-hand menu pane, select  **Containers**.
+
+[![Screenshot that shows the storage blob overview page.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)    
+
+2.  Select  **+ Container**. A pane on your right-hand side opens.
+    
+3.  Enter the following settings, and click  **Create**:
+    -   **Name**: coffee-reviews
+    -   **Public access level**: Container (anonymous read access for containers and blobs)
+    -   **Advanced**:  _no changes_.
+4.  In a new browser tab, download the  [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews)  from  `https://aka.ms/mslearn-coffee-reviews`, and extract the files to the  _reviews_  folder.
+    
+5.  In the Azure portal, select your  _coffee-reviews_  container. In the container, select  **Upload**.    
+    
+ [![Screenshot that shows the storage container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)    
+    
+6.  In the  **Upload blob**  pane, select  **Select a file**.
+    
+7.  In the Explorer window, select  **all**  the files in the  _reviews_  folder, select  **Open**, and then select  **Upload**.
+        
+[![Screenshot that shows the files uploaded to the Azure container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)    
+    
+8.  After the upload is complete, you can close the  **Upload blob**  pane. Your documents are now in your  _coffee-reviews_  storage container.
 
 --------
 ### 2.3. Enriqueça os dados com habilidades de IA  
