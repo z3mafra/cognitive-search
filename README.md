@@ -280,14 +280,15 @@ CodeCopy
     
     CodeCopy
     
-    ~~~json
+ ~~~json
     {
      "search": "sentiment:'negative'",
      "count": true
     }
     
    ~~~
- 
+
+
    
 5.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see  `1`  in the  `@odata.count`  field.
     
@@ -304,6 +305,62 @@ CodeCopy
 
 --------
 ### 2.5. Revise os resultados salvos em uma Loja de conhecimento 
+
+
+Let’s see the power of the knowledge store in action. When you ran the  _Import data wizard_, you also created a knowledge store. Inside the knowledge store, you’ll find the enriched data extracted by AI skills persists in the form of projections and tables.
+
+1.  In the Azure portal, navigate back to your Azure storage account.
+    
+2.  In the left-hand menu pane, select  **Containers**. Select the  **knowledge-store**  container.
+    
+    [![Screenshot of the knowledge-store container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
+    
+3.  Select any of the items, and then click the  **objectprojection.json**  file.
+    
+    [![Screenshot of the objectprojection.json.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
+    
+4.  Select  **Edit**  to see the JSON produced for one of the documents from your Azure data store.
+    
+    [![Screenshot of how to find the edit button.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
+    
+5.  Select the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
+    
+    [![Screenshot of the storage blob breadcrumb.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
+    
+6.  In the  _Containers_, select the container  _coffee-skillset-image-projection_. Select any of the items.
+    
+    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
+    
+7.  Select any of the  _.jpg_  files. Select  **Edit**  to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
+    
+    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
+    
+8.  Select the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
+    
+9.  Select  **Storage browser**  on the left-hand panel, and select  **Tables**. There’s a table for each entity in the index. Select the table  _coffeeSkillsetKeyPhrases_.
+    
+    Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --------
 --------
