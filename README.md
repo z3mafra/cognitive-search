@@ -125,10 +125,49 @@ The solution you’ll create for Fourth Coffee requires the following resources 
 8.  After the upload is complete, you can close the  **Upload blob**  pane. Your documents are now in your  _coffee-reviews_  storage container.
 
 --------
-### 2.3. Enriqueça os dados com habilidades de IA  
+### 2.3. Enriqueça os dados com habilidades de IA: Use o indexador no portal do Azure  
 
+After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an  _Import data wizard_. With this wizard, you can automatically create an index and indexer for supported data sources. You’ll use the wizard to create an index, and import your search documents from storage into the Azure AI Search index.
+
+1.  In the Azure portal, browse to your Azure AI Search resource. On the  **Overview**  page, select  **Import data**.
+    
+    [![Screenshot that shows the import data wizard.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)
+    
+2.  On the  **Connect to your data**  page, in the  **Data Source**  list, select  **Azure Blob Storage**. Complete the data store details with the following values:
+    -   **Data Source**: Azure Blob Storage
+    -   **Data source name**: coffee-customer-data
+    -   **Data to extract**: Content and metadata
+    -   **Parsing mode**: Default
+    -   **Connection string**: *Select  **Choose an existing connection**. Select your storage account, select the  **coffee-reviews**  container, and then click  **Select**.
+    -   **Managed identity authentication**: None
+    -   **Container name**:  _this setting is auto-populated after you choose an existing connection_.
+    -   **Blob folder**:  _Leave this blank_.
+    -   **Description**: Reviews for Fourth Coffee shops.
+3.  Select  **Next: Add cognitive skills (Optional)**.
+    
+4.  In the  **Attach Cognitive Services**  section, select your Azure AI services resource.
+    
+5.  In the  **Add enrichments**  section:
+    -   Change the  **Skillset name**  to  **coffee-skillset**.
+    -   Select the checkbox  **Enable OCR and merge all text into merged_content field**.
+        
+        > **Note**  It’s important to select  **Enable OCR**  to see all of the enriched field options.
+        
+    -   Ensure that the  **Source data field**  is set to  **merged_content**.
+    -   Change the  **Enrichment granularity level**  to  **Pages (5000 character chunks)**.
+    -   Don’t select  _Enable incremental enrichment_
+    -   Select the following enriched fields:
+      
+    | **Cognitive Skill**  | **Parameter**  |  **Field name** |
+    |  ---------  |  ---------  |  ---------  |
+    |   Extract location names    |              |   locations   |   
+    |   Extract key phrases    |       |   keyphrases    |   
+    |   Detect sentiment    |       |   sentiment    |   
+    |   Generate tags from images    |       |   imageTags    |   
+    |   Generate captions from images    |       |   imageCaption    |   
+                
 --------
-### 2.4. Use o indexador no portal do Azure  
+### 2.4.
 
 --------
 ### 2.5. Consulte seu índice de pesquisa  
