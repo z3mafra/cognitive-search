@@ -228,6 +228,80 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 --------
 ### 2.4. Consulte seu índice de pesquisa 
 
+Use the Search explorer to write and test queries. Search explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search explorer to write queries and review results in JSON.
+
+1.  In your Search service’s  _Overview_  page, select  **Search explorer**  at the top of the screen.
+    
+
+    [![Screenshot of how to find Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
+
+    
+2.  Notice how the index selected is the  _coffee-index_  you created. Below the index selected, change the  _view_  to  **JSON view**.
+ 
+
+ [![Screenshot of the Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
+    
+
+
+In the  **JSON query editor**  field, copy and paste:
+
+CodeCopy
+
+~~~json
+{
+    "search": "*",
+    "count": true
+}
+
+~~~
+
+
+
+
+
+1.  Select  **Search**. The search query returns all the documents in the search index, including a count of all the documents in the  **@odata.count**  field. The search index should return a JSON document containing your search results.
+    
+2.  Now let’s filter by location. In the  **JSON query editor**  field, copy and paste:
+    
+    CodeCopy
+    
+~~~json
+    {
+     "search": "locations:'Chicago'",
+     "count": true
+    }
+    
+~~~
+
+ 
+3.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a Chicago location. You should see  `3`  in the  `@odata.count`  field.
+    
+4.  Now let’s filter by sentiment. In the  **JSON query editor**  field, copy and paste:
+    
+    CodeCopy
+    
+    ~~~json
+    {
+     "search": "sentiment:'negative'",
+     "count": true
+    }
+    
+   ~~~
+ 
+   
+5.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see  `1`  in the  `@odata.count`  field.
+    
+    > **Note**  See how the results are sorted by  `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+    
+6.  One of the problems we might want to solve for is why there might be certain reviews. Let’s take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
+
+
+
+
+
+
+
+
 --------
 ### 2.5. Revise os resultados salvos em uma Loja de conhecimento 
 
