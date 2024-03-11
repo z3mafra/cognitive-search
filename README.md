@@ -165,16 +165,73 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     |   Detect sentiment    |       |   sentiment    |   
     |   Generate tags from images    |       |   imageTags    |   
     |   Generate captions from images    |       |   imageCaption    |   
-                
+
+
+6.  Under  **Save enrichments to a knowledge store**, select:
+    
+    -   Image projections
+    -   Documents
+    -   Pages
+    -   Key phrases
+    -   Entities
+    -   Image details
+    -   Image references
+    
+    > **Note**  If a warning asking for a  **Storage Account Connection String**  appears.
+    > 
+
+
+    > [![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
+    > 
+
+    >> a.  Select  **Choose an existing connection**. Choose the storage account you created earlier.
+    >> b.  Click on  **+ Container**  to create a new container called  **knowledge-store**  with the privacy level set to  **Private**, and select  **Create**.
+    >> c.  Select the  **knowledge-store**  container, and then click  **Select**  at the bottom of the screen.
+
+    7.  Select  **Azure blob projections: Document**. A setting for  _Container name_  with the  _knowledge-store_  container auto-populated displays. Don’t change the container name.
+    
+8.  Select  **Next: Customize target index**. Change the  **Index name**  to  **coffee-index**.
+    
+9.  Ensure that the  **Key**  is set to  **metadata_storage_path**. Leave  **Suggester name**  blank and  **Search mode**  autopopulated.
+    
+10.  Review the index fields’ default settings. Select  **filterable**  for all the fields that are already selected by default.
+
+[
+    [![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
+    
+    
+11.  Select  **Next: Create an indexer**.
+    
+12.  Change the  **Indexer name**  to  **coffee-indexer**.
+    
+13.  Leave the  **Schedule**  set to  **Once**.
+    
+14.  Expand the  **Advanced options**. Ensure that the  **Base-64 Encode Keys**  option is selected, as encoding keys can make the index more efficient.
+    
+15.  Select  **Submit**  to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+    -   Extracts the document metadata fields and content from the data source.
+    -   Runs the skillset of cognitive skills to generate more enriched fields.
+    -   Maps the extracted fields to the index.
+16.  Return to your Azure AI Search resource page. On the left pane, under  **Search Management**, select  **Indexers**. Select the newly created  **coffee-indexer**. Wait a minute, and select  **&orarr; Refresh**  until the  **Status**  indicates success.
+    
+17.  Select the indexer name to see more details.
+
+
+[
+    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
+    
+
+
+
+
+    
 --------
-### 2.4.
+### 2.4. Consulte seu índice de pesquisa 
 
 --------
-### 2.5. Consulte seu índice de pesquisa  
+### 2.5. Revise os resultados salvos em uma Loja de conhecimento 
 
 --------
-### 2.6. Revise os resultados salvos em uma Loja de conhecimento  
-
 --------
 ## 3. Compartilhe conosco o link desse repositório através do botão 'entregar projeto'  
 
