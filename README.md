@@ -17,15 +17,15 @@ cognitive-search
 
 Na maquina local foi crido o diretório 'cognitive-search'  
 
-'''bash
-$ mkdir cognitive-search
-'''  
+~~~bash  
+$ mkdir cognitive-search  
+~~~  
 
 Depois, iniciei o diretório como um repositório no Git.
 
-'''bash
-$ git init
-'''
+~~~bash  
+$ git init  
+~~~  
 
 No GitHub foi criado o repositório cognitive-search
 
