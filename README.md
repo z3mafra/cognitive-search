@@ -83,16 +83,16 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 --------
 ### 2.1.2. Criando um recurso "**Azure AI services**"  
 
->    - You’ll need to provision an Azure AI services resource that’s in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.  
->    - Return to the home page of the Azure portal. Click the ＋Create a resource button and search for Azure AI services. Select create an Azure AI services plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:  
->      - Subscription: Your Azure subscription.  
->      - Resource group: The same resource group as your Azure AI Search resource.  
->      - Region: The same location as your Azure AI Search resource.  
->      - Name: A unique name.  
+>    - Será necessário provisionar um recurso no "**Azure AI services**" na mesma localidade do recurso "**Azure AI Search**". Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.  
+>    - Regressar à página inicial do portal Azure. Clicar no botão "**+ Create a resource** e pesquise o *Azure AI Services*. Selecione create an Azure AI services plan. Você será levado a uma página para criar um recurso de serviços de IA do Azure. Configure-o com as seguintes configurações:  
+>      - Subscription: Azure subscription 1.  
+>      - Resource group: LabCogSearch.  
+>      - Region: East US.  
+>      - Name: CogLabSearch.  
 >      - Pricing tier: Standard S0  
->      - By checking this box I acknowledge that I have read and understood all the terms below: Selected  
->    - Select Review + create. After you see the response Validation Passed, select Create.  
->    - Wait for deployment to complete, then view the deployment details.  
+>      - Selecionar o box: "By checking this box I acknowledge that I have read and understood all the terms below"   
+>    - Selecionar "**Review + create**". e depois de ver a resposta "**Validation Passed**", selecionar "**Create**".  
+>    - Aguarde a conclusão da implantação e visualize os detalhes da implantação.  
   
 --------
 ### 2.1.3. Create a storage account  
