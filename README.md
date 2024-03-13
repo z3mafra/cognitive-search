@@ -19,10 +19,10 @@ Neste laboratório você irá:
 
 >- Criar recursos do Azure  
 >- Extrair dados de uma fonte de dados  
->- Enriqueça os dados com habilidades de IA  
->- Use o indexador do Azure no portal do Azure  
->- Consulte seu índice de pesquisa  
->- Revise os resultados salvos em um Repositório de conhecimento (*Knowledge Store*)  
+>- Enriquecer os dados com habilidades de IA  
+>- Usar o indexador do Azure no portal do Azure  
+>- Consultar seu índice de pesquisa  
+>- Revisar os resultados salvos em um Repositório de conhecimento (*Knowledge Store*)  
 
 
 --------
