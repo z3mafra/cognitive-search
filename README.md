@@ -1,5 +1,5 @@
-# cognitive-search  
-cognitive-search  
+# Desafio: Azure Cognitive Search: Utilizando AI Search para indexação e consulta de Dados
+## Repositório: cognitive-search  
 
 > 1. Criar um novo repositório no github com um nome a sua preferência  
 > 2. Descrever o passo a passo para se configurar uma pesquisa, no arquivo readme.md  
