@@ -22,7 +22,7 @@ Neste laboratório você irá:
 >- Enriqueça os dados com habilidades de IA  
 >- Use o indexador do Azure no portal do Azure  
 >- Consulte seu índice de pesquisa  
->- Revise os resultados salvos em um Repositório de conhecimento Knowledge Store  
+>- Revise os resultados salvos em um Repositório de conhecimento (*Knowledge Store*)  
 
 
 --------
