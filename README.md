@@ -67,7 +67,7 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 > Os recursos do Azure AI Search e dos serviços Azure AI devem estar no mesmo local!!  
 
 --------
-### 2.1.1. Create an Azure AI Search resource  
+### 2.1.1. Criando um recurso "**Azure AI Search**"   
 
 >    - Fazer login no [Azure portal](https://portal.azure.com/).
 >    - Clicar no botão "**+ Create a resource**, pesquise o *Azure AI Search* e crie um recurso do **Azure AI Search** com as seguintes configurações:  
@@ -81,7 +81,7 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 
 
 --------
-### 2.1.2. Create an Azure AI services resource  
+### 2.1.2. Criando um recurso "**Azure AI services**"  
 
 >    - You’ll need to provision an Azure AI services resource that’s in the same location as your Azure AI Search resource. Your search solution will use this resource to enrich the data in the datastore with AI-generated insights.  
 >    - Return to the home page of the Azure portal. Click the ＋Create a resource button and search for Azure AI services. Select create an Azure AI services plan. You will be taken to a page to create an Azure AI services resource. Configure it with the following settings:  
