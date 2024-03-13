@@ -69,15 +69,15 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 --------
 ### 2.1.1. Create an Azure AI Search resource  
 
->    - Sign into the Azure portal.
->    - Click the + Create a resource button, search for Azure AI Search, and create a Azure AI Search resource with the following settings:  
+>    - Fazer login no [Azure portal](https://portal.azure.com/).
+>    - Clicar no botão "**+ Create a resource**, pesquise o *Azure AI Search* e crie um recurso do **Azure AI Search** com as seguintes configurações:  
 >      - Subscription: Azure subscription 1.  
->      - Resource group: LabVision.  
->      - Service name: A unique name.  
->      - Location: Choose any available region.  
+>      - Resource group: LabCogSearch.  
+>      - Service name: cognitionsearch.  
+>      - Location: East US.  
 >      - Pricing tier: Basic  
->    - Select Review + create, and after you see the response Validation Success, select Create.  
->    - After deployment completes, select Go to resource. On the Azure AI Search overview page, you can add indexes, import data, and search created indexes.  
+>    - Selecionar "**Review + create**", e depois de ver a resposta "**Validation Success**", selecionar "**Create**".  
+>    - Após a conclusão da implantação, selecionar "**Go to resource**". Na página de visão geral do "**Azure AI Search**", você pode adicionar índices, importar dados e pesquisar índices criados.  
 
 
 --------
