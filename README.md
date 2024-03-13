@@ -13,16 +13,16 @@
 >>  
 --------
 ##  Explore an Azure AI Search index (UI)
-Let’s imagine you work for Fourth Coffee, a national coffee chain. You’re asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure AI Search index using data extracted from customer reviews.  
+Vamos imaginar que você trabalha para a *Fourth Coffee*, uma rede nacional de cafés. Você foi solicitado a ajudar a construir uma solução de mineração de conhecimento que facilite a busca de *insights* sobre as experiências dos clientes. Você decide criar um índice do **Azure AI Search** usando dados extraídos de avaliações de clientes..  
 
-In this lab you’ll:  
+Neste laboratório você irá:  
 
->- Create Azure resources  
->- Extract data from a data source  
->- Enrich data with AI skills  
->- Use Azure’s indexer in the Azure portal  
->- Query your search index  
->- Review results saved to a Knowledge Store  
+>- Criar recursos do Azure  
+>- Extrair dados de uma fonte de dados  
+>- Enriqueça os dados com habilidades de IA  
+>- Use o indexador do Azure no portal do Azure  
+>- Consulte seu índice de pesquisa  
+>- Revise os resultados salvos em um Repositório de conhecimento Knowledge Store  
 
 
 --------
@@ -46,7 +46,7 @@ No GitHub foi criado o repositório cognitive-search
 > 
 > - "Novo repositório".  
 > - Nome para o repositório: "cognitive-search".  
-> - Descrição: "Projeto Vision Studio com três processos de identificação: Detect faces; Read text; e, Analyze images.".  
+> - Descrição: "Projeto Vision Studio com três processos de identificação: Detect faces; Read text; e, Analyze images".  
 > - Visibilidade: "pública".  
 > - Opção: LEIAME.  
 > - Cliquei em "Criar repositório".  
