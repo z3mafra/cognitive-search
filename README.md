@@ -64,7 +64,7 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 > - Uma conta de armazenamento (**Storage account**) com contêineres de blobs, que armazenará documentos brutos e outras coleções de tabelas, objetos ou arquivos.  
 
 >[!NOTE]
-> Your Azure AI Search and Azure AI services resources must be in the same location!  
+> Os recursos do Azure AI Search e dos serviços Azure AI devem estar no mesmo local!!  
 
 --------
 ### 2.1.1. Create an Azure AI Search resource  
