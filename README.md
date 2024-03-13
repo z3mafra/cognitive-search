@@ -164,9 +164,9 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 >        -   Change the  **Skillset name**  to  **coffee-skillset**.
 >        -   Select the checkbox  **Enable OCR and merge all text into merged_content field**.
     
-> [!**Note**  It’s important to select  **Enable OCR**  to see all of the enriched field options.] 
+> **Note**  It’s important to select  **Enable OCR**  to see all of the enriched field options. 
         
-  -   nsure that the  **Source data field**  is set to  **merged_content**.
+  -   Ensure that the  **Source data field**  is set to  **merged_content**.
   -   Change the  **Enrichment granularity level**  to  **Pages (5000 character chunks)**.
   -   Don’t select  _Enable incremental enrichment_
   -   Select the following enriched fields:
@@ -182,26 +182,27 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 >    6.  Under  **Save enrichments to a knowledge store**, select:  
     
-    -   Image projections
-    -   Documents
-    -   Pages
-    -   Key phrases
-    -   Entities
-    -   Image details
-    -   Image references  
+  -   Image projections
+  -   Documents
+  -   Pages
+  -   Key phrases
+  -   Entities
+  -   Image details
+  -   Image references  
 --  
 
-    > **Note**  If a warning asking for a  **Storage Account Connection String**  appears.
-    > 
-    >   [![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)
-    >> a.  Select  **Choose an existing connection**. Choose the storage account you created earlier.
-    >> b.  Click on  **+ Container**  to create a new container called  **knowledge-store**  with the privacy level set to  **Private**, and select  **Create**.
-    >> c.  Select the  **knowledge-store**  container, and then click  **Select**  at the bottom of the screen.  
---  
-
-8.  Select  **Azure blob projections: Document**. A setting for  _Container name_  with the  _knowledge-store_  container auto-populated displays. Don’t change the container name.
-    
-9.  Select  **Next: Customize target index**. Change the  **Index name**  to  **coffee-index**.
+  > **Note**  If a warning asking for a  **Storage Account Connection String**  appears.
+  >   
+  >   [![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)  
+>>  
+>> a.  Select  **Choose an existing connection**. Choose the storage account you created earlier.  
+>> b.  Click on  **+ Container**  to create a new container called  **knowledge-store**  with the privacy level set to  **Private**, and select  **Create**.  
+>> c.  Select the  **knowledge-store**  container, and then click  **Select**  at the bottom of the screen.    
+>   
+>    
+>    8.  Select  **Azure blob projections: Document**. A setting for  _Container name_  with the  _knowledge-store_  container auto-populated displays. Don’t change the container name.
+>    
+>    9.  Select  **Next: Customize target index**. Change the  **Index name**  to  **coffee-index**.
 >        
 >    10.  Ensure that the  **Key**  is set to  **metadata_storage_path**. Leave  **Suggester name**  blank and  **Search mode**  autopopulated.
 >        
