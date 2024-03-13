@@ -10,7 +10,21 @@ cognitive-search
 >> 2.5. Revisão dos resultados salvos
 >> 2.6. Insights e Possibilidades  
 > 3. Fnalizar e Compartilhar o link do repositório  
->> 
+>>  
+--------
+##  Explore an Azure AI Search index (UI)
+Let’s imagine you work for Fourth Coffee, a national coffee chain. You’re asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure AI Search index using data extracted from customer reviews.  
+
+In this lab you’ll:  
+
+>- Create Azure resources  
+>- Extract data from a data source  
+>- Enrich data with AI skills  
+>- Use Azure’s indexer in the Azure portal  
+>- Query your search index  
+>- Review results saved to a Knowledge Store  
+
+
 --------
 ## 1. Criar um novo repositório no github com um nome a sua preferência  
 
