@@ -160,27 +160,27 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     
 4.  In the  **Attach Cognitive Services**  section, select your Azure AI services resource.
     
-5.  In the  **Add enrichments**  section:
-    -   Change the  **Skillset name**  to  **coffee-skillset**.
-    -   Select the checkbox  **Enable OCR and merge all text into merged_content field**.
+>    5.  In the  **Add enrichments**  section:
+>        -   Change the  **Skillset name**  to  **coffee-skillset**.
+>        -   Select the checkbox  **Enable OCR and merge all text into merged_content field**.
+    
+> [!**Note**  It’s important to select  **Enable OCR**  to see all of the enriched field options.] 
         
-        > **Note**  It’s important to select  **Enable OCR**  to see all of the enriched field options.
-        
-    -   Ensure that the  **Source data field**  is set to  **merged_content**.
-    -   Change the  **Enrichment granularity level**  to  **Pages (5000 character chunks)**.
-    -   Don’t select  _Enable incremental enrichment_
-    -   Select the following enriched fields:
+  -   nsure that the  **Source data field**  is set to  **merged_content**.
+  -   Change the  **Enrichment granularity level**  to  **Pages (5000 character chunks)**.
+  -   Don’t select  _Enable incremental enrichment_
+  -   Select the following enriched fields:
       
-    | **Cognitive Skill**  | **Parameter**  |  **Field name** |
-    |  ---------  |  ---------  |  ---------  |
-    |   Extract location names    |              |   locations   |   
-    |   Extract key phrases    |       |   keyphrases    |   
-    |   Detect sentiment    |       |   sentiment    |   
-    |   Generate tags from images    |       |   imageTags    |   
-    |   Generate captions from images    |       |   imageCaption    |   
+  | **Cognitive Skill**  | **Parameter**  |  **Field name** |
+  |  ---------  |  ---------  |  ---------  |
+  |   Extract location names    |              |   locations   |   
+  |   Extract key phrases    |       |   keyphrases    |   
+  |   Detect sentiment    |       |   sentiment    |   
+  |   Generate tags from images    |       |   imageTags    |   
+  |   Generate captions from images    |       |   imageCaption    |   
 
 
-6.  Under  **Save enrichments to a knowledge store**, select:  
+>    6.  Under  **Save enrichments to a knowledge store**, select:  
     
     -   Image projections
     -   Documents
@@ -202,34 +202,29 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 8.  Select  **Azure blob projections: Document**. A setting for  _Container name_  with the  _knowledge-store_  container auto-populated displays. Don’t change the container name.
     
 9.  Select  **Next: Customize target index**. Change the  **Index name**  to  **coffee-index**.
-    
-10.  Ensure that the  **Key**  is set to  **metadata_storage_path**. Leave  **Suggester name**  blank and  **Search mode**  autopopulated.
-    
-11.  Review the index fields’ default settings. Select  **filterable**  for all the fields that are already selected by default.
-
-[
-    [![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
-    
-    
-11.  Select  **Next: Create an indexer**.
-    
-12.  Change the  **Indexer name**  to  **coffee-indexer**.
-    
-13.  Leave the  **Schedule**  set to  **Once**.
-    
-14.  Expand the  **Advanced options**. Ensure that the  **Base-64 Encode Keys**  option is selected, as encoding keys can make the index more efficient.
-    
-15.  Select  **Submit**  to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
+>        
+>    10.  Ensure that the  **Key**  is set to  **metadata_storage_path**. Leave  **Suggester name**  blank and  **Search mode**  autopopulated.
+>        
+>    11.  Review the index fields’ default settings. Select  **filterable**  for all the fields that are already selected by default.
+>    
+>   [![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
+>    
+>    11.  Select  **Next: Create an indexer**.
+>    12.  Change the  **Indexer name**  to  **coffee-indexer**.
+>    
+>    13.  Leave the  **Schedule**  set to  **Once**.
+>    
+>    14.  Expand the  **Advanced options**. Ensure that the  **Base-64 Encode Keys**  option is selected, as encoding keys can make the index more efficient.
+>    
+>    15.  Select  **Submit**  to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
     -   Extracts the document metadata fields and content from the data source.
     -   Runs the skillset of cognitive skills to generate more enriched fields.
     -   Maps the extracted fields to the index.
-16.  Return to your Azure AI Search resource page. On the left pane, under  **Search Management**, select  **Indexers**. Select the newly created  **coffee-indexer**. Wait a minute, and select  **&orarr; Refresh**  until the  **Status**  indicates success.
-    
-17.  Select the indexer name to see more details.
-
-
-[
-    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
+>    16.  Return to your Azure AI Search resource page. On the left pane, under  **Search Management**, select  **Indexers**. Select the newly created  **coffee-indexer**. Wait a minute, and select  **&orarr; Refresh**  until the  **Status**  indicates success.
+>        
+>    17.  Select the indexer name to see more details.
+>    
+>    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
     
 
 
@@ -241,16 +236,14 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 Use the Search explorer to write and test queries. Search explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search explorer to write queries and review results in JSON.
 
-1.  In your Search service’s  _Overview_  page, select  **Search explorer**  at the top of the screen.
+> 1.  In your Search service’s  _Overview_  page, select  **Search explorer**  at the top of the screen.
+>    
+>    [![Screenshot of how to find Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
+
     
-
-    [![Screenshot of how to find Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
-
-    
-2.  Notice how the index selected is the  _coffee-index_  you created. Below the index selected, change the  _view_  to  **JSON view**.
- 
-
- [![Screenshot of the Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
+> 2.  Notice how the index selected is the  _coffee-index_  you created. Below the index selected, change the  _view_  to  **JSON view**.
+>    
+>    [![Screenshot of the Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
     
 
 
@@ -270,9 +263,9 @@ CodeCopy
 
 
 
-1.  Select  **Search**. The search query returns all the documents in the search index, including a count of all the documents in the  **@odata.count**  field. The search index should return a JSON document containing your search results.
+> 1.  Select  **Search**. The search query returns all the documents in the search index, including a count of all the documents in the  **@odata.count**  field. The search index should return a JSON document containing your search results.
     
-2.  Now let’s filter by location. In the  **JSON query editor**  field, copy and paste:
+> 2.  Now let’s filter by location. In the  **JSON query editor**  field, copy and paste:
     
     CodeCopy
     
@@ -285,9 +278,9 @@ CodeCopy
 ~~~
 
  
-3.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a Chicago location. You should see  `3`  in the  `@odata.count`  field.
+> 3.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a Chicago location. You should see  `3`  in the  `@odata.count`  field.
     
-4.  Now let’s filter by sentiment. In the  **JSON query editor**  field, copy and paste:
+> 4.  Now let’s filter by sentiment. In the  **JSON query editor**  field, copy and paste:
     
     CodeCopy
     
@@ -301,11 +294,11 @@ CodeCopy
 
 
    
-5.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see  `1`  in the  `@odata.count`  field.
+> 5.  Select  **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment. You should see  `1`  in the  `@odata.count`  field.
     
     > **Note**  See how the results are sorted by  `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
     
-6.  One of the problems we might want to solve for is why there might be certain reviews. Let’s take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
+> 6.  One of the problems we might want to solve for is why there might be certain reviews. Let’s take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
 
 
@@ -320,48 +313,54 @@ CodeCopy
 
 Let’s see the power of the knowledge store in action. When you ran the  _Import data wizard_, you also created a knowledge store. Inside the knowledge store, you’ll find the enriched data extracted by AI skills persists in the form of projections and tables.
 
-1.  In the Azure portal, navigate back to your Azure storage account.
+> 1.  In the Azure portal, navigate back to your Azure storage account.
     
-2.  In the left-hand menu pane, select  **Containers**. Select the  **knowledge-store**  container.
+> 2.  In the left-hand menu pane, select  **Containers**. Select the  **knowledge-store**  container.
     
-    [![Screenshot of the knowledge-store container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
+>    [![Screenshot of the knowledge-store container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
     
-3.  Select any of the items, and then click the  **objectprojection.json**  file.
+> 3.  Select any of the items, and then click the  **objectprojection.json**  file.
     
-    [![Screenshot of the objectprojection.json.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
+>    [![Screenshot of the objectprojection.json.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
     
-4.  Select  **Edit**  to see the JSON produced for one of the documents from your Azure data store.
+> 4.  Select  **Edit**  to see the JSON produced for one of the documents from your Azure data store.
     
-    [![Screenshot of how to find the edit button.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
+>    [![Screenshot of how to find the edit button.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
     
-5.  Select the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
+> 5.  Select the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
+>     
+>    [![Screenshot of the storage blob breadcrumb.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
+>        
+> 6.  In the  _Containers_, select the container  _coffee-skillset-image-projection_. Select any of the items.   
     
-    [![Screenshot of the storage blob breadcrumb.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
+>    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
     
-6.  In the  _Containers_, select the container  _coffee-skillset-image-projection_. Select any of the items.
+> 7.  Select any of the  _.jpg_  files. Select  **Edit**  to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
     
-    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
+>    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
     
-7.  Select any of the  _.jpg_  files. Select  **Edit**  to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
+> 8.  Select the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
     
-    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
+> 9.  Select  **Storage browser**  on the left-hand panel, and select  **Tables**. There’s a table for each entity in the index. Select the table  _coffeeSkillsetKeyPhrases_.
     
-8.  Select the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
-    
-9.  Select  **Storage browser**  on the left-hand panel, and select  **Tables**. There’s a table for each entity in the index. Select the table  _coffeeSkillsetKeyPhrases_.
-    
-    Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
+>    Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
 
 --------
 ### 2.6. Insights e Possibilidades  
-
->> O Processamento de Linguagem Natural (PNL) é fundamental para compreender e interagir com a linguagem escrita e falada, possibilitando a extração de significado semântico e a formulação de respostas em linguagem natural.  
->> Agências de Viagens, entre outros serviçoes, podem usar o Azure Language Studio para analisar avaliações de hotéis, identificando sentimentos e entidades mencionadas, melhorando a experiência do cliente.  
->> O Azure Language Studio é uma ferramenta poderosa oferecida pela Microsoft para análise de texto e compreensão de linguagem natural. Uma das aplicações mais significativas do Language Studio é a análise de sentimentos, onde ele pode ser utilizado para determinar se as avaliações de produtos, serviços ou qualquer outro tipo de conteúdo são predominantemente positivas ou negativas. Isso é essencial para empresas que desejam entender o feedback dos clientes e a reputação de sua marca. Ao empregar técnicas de processamento de linguagem natural avançadas, o Language Studio é capaz de identificar nuances no texto, capturando não apenas palavras-chave, mas também o contexto e o tom geral das avaliações.  
->> Através do uso de algoritmos de aprendizado de máquina e modelos de linguagem pré-treinados, o Language Studio é capaz de analisar grandes volumes de avaliações de forma rápida e eficiente. Ele pode detectar palavras e frases que indicam sentimentos positivos ou negativos, levando em consideração aspectos como sarcasmo, ironia e ambiguidade. Isso permite uma avaliação mais precisa e detalhada do sentimento expresso no texto, proporcionando insights valiosos para as empresas.  
->> Uma das vantagens do Azure Language Studio é sua capacidade de personalização. As empresas podem ajustar os modelos de análise de sentimento de acordo com suas necessidades específicas e o domínio de seu negócio. Isso permite uma análise mais precisa e relevante das avaliações, levando em consideração termos e expressões específicas da indústria ou do público-alvo. Além disso, o Language Studio oferece integração com outras ferramentas e serviços do Azure, permitindo uma implementação suave em diferentes sistemas e plataformas.  
->> No entanto, é importante reconhecer que nenhuma ferramenta de análise de sentimento é perfeita. O Azure Language Studio pode enfrentar desafios ao lidar com textos complexos ou ambíguos, onde o contexto pode influenciar significativamente o sentimento expresso. Além disso, como qualquer tecnologia baseada em machine learning, o desempenho do Language Studio pode variar dependendo da qualidade dos dados de treinamento e das configurações específicas utilizadas. Portanto, é fundamental complementar a análise automatizada com revisão humana e outras formas de feedback para obter uma compreensão abrangente das avaliações.  
->> Um outro aspecto importante, que também deve ser consdierado, é a integração dessas ferramentas com os ambientes de navegação na internet, tais como plataformas, sites e aplicativos.  
+  
+> O Processamento de Linguagem Natural (PNL) é fundamental para compreender e interagir com a linguagem escrita e falada, possibilitando a extração de significado semântico e a formulação de respostas em linguagem natural.  
+  
+> Agências de Viagens, entre outros serviçoes, podem usar o Azure Language Studio para analisar avaliações de hotéis, identificando sentimentos e entidades mencionadas, melhorando a experiência do cliente.  
+  
+> O Azure Language Studio é uma ferramenta poderosa oferecida pela Microsoft para análise de texto e compreensão de linguagem natural. Uma das aplicações mais significativas do Language Studio é a análise de sentimentos, onde ele pode ser utilizado para determinar se as avaliações de produtos, serviços ou qualquer outro tipo de conteúdo são predominantemente positivas ou negativas. Isso é essencial para empresas que desejam entender o feedback dos clientes e a reputação de sua marca. Ao empregar técnicas de processamento de linguagem natural avançadas, o Language Studio é capaz de identificar nuances no texto, capturando não apenas palavras-chave, mas também o contexto e o tom geral das avaliações.  
+  
+> Através do uso de algoritmos de aprendizado de máquina e modelos de linguagem pré-treinados, o Language Studio é capaz de analisar grandes volumes de avaliações de forma rápida e eficiente. Ele pode detectar palavras e frases que indicam sentimentos positivos ou negativos, levando em consideração aspectos como sarcasmo, ironia e ambiguidade. Isso permite uma avaliação mais precisa e detalhada do sentimento expresso no texto, proporcionando insights valiosos para as empresas.  
+  
+> Uma das vantagens do Azure Language Studio é sua capacidade de personalização. As empresas podem ajustar os modelos de análise de sentimento de acordo com suas necessidades específicas e o domínio de seu negócio. Isso permite uma análise mais precisa e relevante das avaliações, levando em consideração termos e expressões específicas da indústria ou do público-alvo. Além disso, o Language Studio oferece integração com outras ferramentas e serviços do Azure, permitindo uma implementação suave em diferentes sistemas e plataformas.  
+  
+> No entanto, é importante reconhecer que nenhuma ferramenta de análise de sentimento é perfeita. O Azure Language Studio pode enfrentar desafios ao lidar com textos complexos ou ambíguos, onde o contexto pode influenciar significativamente o sentimento expresso. Além disso, como qualquer tecnologia baseada em machine learning, o desempenho do Language Studio pode variar dependendo da qualidade dos dados de treinamento e das configurações específicas utilizadas. Portanto, é fundamental complementar a análise automatizada com revisão humana e outras formas de feedback para obter uma compreensão abrangente das avaliações.  
+  
+> Um outro aspecto importante, que também deve ser consdierado, é a integração dessas ferramentas com os ambientes de navegação na internet, tais como plataformas, sites e aplicativos.  
 
 
 
