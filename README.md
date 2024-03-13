@@ -99,13 +99,13 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
   
 >    - Return to the home page of the Azure portal, and then select the + Create a resource button.  
 >    - Search for storage account, and create a Storage account resource with the following settings:  
->      - Subscription: Your Azure subscription.  
->      - Resource group: The same resource group as your Azure AI Search and Azure AI services resources.  
->      - Storage account name: A unique name.  
+>      - Subscription: Azure subscription 1.  
+>      - Resource group: LabCogSearch.  
+>      - Storage account name: cogsrchstg.  
 >      - Location: Choose any available location.  
 >      - Performance: Standard  
 >      - Redundancy: Locally redundant storage (LRS)  
->    - Click Review and then click Create. Wait for deployment to complete, and then go to the deployed resource.  
+>    - Clicar "**Review**" e então clicar "**Create**". Aguarde a conclusão da implantação e vá para o recurso implantado.  
 >    - In the Azure Storage account you created, in the left-hand menu pane, select Configuration (under Settings).  
 >    - Change the setting for Allow Blob anonymous access to Enabled and then select Save.  
   
@@ -113,40 +113,40 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 ### 2.2. Extrair dados de uma fonte  
 > ## Upload Documents to Azure Storage
 
-1.  In the left-hand menu pane, select  **Containers**.
+> 1.  In the left-hand menu pane, select  **Containers**.
 
 [![Screenshot that shows the storage blob overview page.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)    
 
-2.  Select  **+ Container**. A pane on your right-hand side opens.
+> 2.  Select  **+ Container**. A pane on your right-hand side opens.
     
-3.  Enter the following settings, and click  **Create**:
+> 3.  Enter the following settings, and click  **Create**:
     -   **Name**: coffee-reviews
     -   **Public access level**: Container (anonymous read access for containers and blobs)
     -   **Advanced**:  _no changes_.
-4.  In a new browser tab, download the  [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews)  from  `https://aka.ms/mslearn-coffee-reviews`, and extract the files to the  _reviews_  folder.
+> 4.  In a new browser tab, download the  [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews)  from  `https://aka.ms/mslearn-coffee-reviews`, and extract the files to the  _reviews_  folder.
     
-5.  In the Azure portal, select your  _coffee-reviews_  container. In the container, select  **Upload**.    
+> 5.  In the Azure portal, select your  _coffee-reviews_  container. In the container, select  **Upload**.    
     
  [![Screenshot that shows the storage container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)    
     
-6.  In the  **Upload blob**  pane, select  **Select a file**.
+> 6.  In the  **Upload blob**  pane, select  **Select a file**.
     
-7.  In the Explorer window, select  **all**  the files in the  _reviews_  folder, select  **Open**, and then select  **Upload**.
+> 7.  In the Explorer window, select  **all**  the files in the  _reviews_  folder, select  **Open**, and then select  **Upload**.
         
 [![Screenshot that shows the files uploaded to the Azure container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)    
     
-8.  After the upload is complete, you can close the  **Upload blob**  pane. Your documents are now in your  _coffee-reviews_  storage container.
+> 8.  After the upload is complete, you can close the  **Upload blob**  pane. Your documents are now in your  _coffee-reviews_  storage container.
 
 --------
 ### 2.3. Enriquecer os dados com habilidades de IA: indexador no portal do Azure  
 
 After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an  _Import data wizard_. With this wizard, you can automatically create an index and indexer for supported data sources. You’ll use the wizard to create an index, and import your search documents from storage into the Azure AI Search index.
 
-1.  In the Azure portal, browse to your Azure AI Search resource. On the  **Overview**  page, select  **Import data**.
+> 1.  In the Azure portal, browse to your Azure AI Search resource. On the  **Overview**  page, select  **Import data**.
     
-    [![Screenshot that shows the import data wizard.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)
+   [![Screenshot that shows the import data wizard.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)
     
-2.  On the  **Connect to your data**  page, in the  **Data Source**  list, select  **Azure Blob Storage**. Complete the data store details with the following values:
+> 2.  On the  **Connect to your data**  page, in the  **Data Source**  list, select  **Azure Blob Storage**. Complete the data store details with the following values:
     -   **Data Source**: Azure Blob Storage
     -   **Data source name**: coffee-customer-data
     -   **Data to extract**: Content and metadata
@@ -156,11 +156,11 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     -   **Container name**:  _this setting is auto-populated after you choose an existing connection_.
     -   **Blob folder**:  _Leave this blank_.
     -   **Description**: Reviews for Fourth Coffee shops.
-3.  Select  **Next: Add cognitive skills (Optional)**.
+> 3.  Select  **Next: Add cognitive skills (Optional)**.
     
-4.  In the  **Attach Cognitive Services**  section, select your Azure AI services resource.
+> 4.  In the  **Attach Cognitive Services**  section, select your Azure AI services resource.
     
->    5.  In the  **Add enrichments**  section:
+> 5.  In the  **Add enrichments**  section:
 >        -   Change the  **Skillset name**  to  **coffee-skillset**.
 >        -   Select the checkbox  **Enable OCR and merge all text into merged_content field**.
     
@@ -180,7 +180,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
   |   Generate captions from images    |       |   imageCaption    |   
 
 
->    6.  Under  **Save enrichments to a knowledge store**, select:  
+> 6.  Under  **Save enrichments to a knowledge store**, select:  
     
   -   Image projections
   -   Documents
