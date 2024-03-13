@@ -12,7 +12,7 @@
 > 3. Fnalizar e Compartilhar o link do repositório  
 >>  
 --------
-##  Explore an Azure AI Search index (UI)
+##  Explore um índice do Azure AI Search (UI)
 Vamos imaginar que você trabalha para a *Fourth Coffee*, uma rede nacional de cafés. Você foi solicitado a ajudar a construir uma solução de mineração de conhecimento que facilite a busca de *insights* sobre as experiências dos clientes. Você decide criar um índice do **Azure AI Search** usando dados extraídos de avaliações de clientes..  
 
 Neste laboratório você irá:  
@@ -57,11 +57,11 @@ No GitHub foi criado o repositório cognitive-search
 
 --------
 ### 2.1. Criar recursos do Azure  
-The solution you’ll create for Fourth Coffee requires the following resources in your Azure subscription:
+A solução que você criará para o *Fourth Coffee* requer os seguintes recursos em sua assinatura do Azure:
 
-> - An Azure AI Search resource, which will manage indexing and querying.  
-> - An Azure AI services resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.  
-> - A Storage account with blob containers, which will store raw documents and other collections of tables, objects, or files.  
+> - Um recurso do **Azure AI Search**, que gerenciará a indexação e a consulta.  
+> - Um recurso de serviços do **Azure AI services**, que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados por IA.  
+> - Uma conta de armazenamento (**Storage account**) com contêineres de blobs, que armazenará documentos brutos e outras coleções de tabelas, objetos ou arquivos.  
 
 >[!NOTE]
 > Your Azure AI Search and Azure AI services resources must be in the same location!  
