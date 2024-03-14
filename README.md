@@ -210,7 +210,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 >        
 >    11.  Revise as configurações padrão dos campos de índice. Selecionar **filterable** para todos os campos que já estão selecionados por padrão.
 >  
->   [![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
+>   [![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](https://github.com/z3mafra/cognitive-search/blob/main/screens/6%20index%20import%20data.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/6%20index%20import%20data.jpg)
 >    
 >    11.  Selecionar **Next: Create an indexer**.  
 >    12.  Mudar o **Indexer name** para **coffee-indexer**.  
@@ -234,7 +234,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 >        
 >    18.  Selecionar o nome do "*indexer*" para ver mais detalhes.
 >    
->    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
+>    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://github.com/z3mafra/cognitive-search/blob/main/screens/7%20coffe%20index.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/7%20coffe%20index.jpg)
     
 
 
@@ -248,12 +248,12 @@ Use o Search Explorer para escrever e testar consultas. O explorador de pesquisa
 
 > 1.  Na página _Overview_ do seu serviço de pesquisa, selecione **Search Explorer** na parte superior da tela.
 >    
->    [![Screenshot of how to find Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
+>    [![Screenshot of how to find Search explorer.](https://github.com/z3mafra/cognitive-search/blob/main/screens/8%20search%20explorer.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/8%20search%20explorer.jpg)
 
     
 > 2.  Observe como o índice selecionado é o _coffee-index_ que você criou. Abaixo do índice selecionado, altere _view_ para **JSON View**.
 >    
->    [![Screenshot of the Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
+>    [![Screenshot of the Search explorer.](https://github.com/z3mafra/cognitive-search/blob/main/screens/9%20json.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/9%20json.jpg)
     
 
 
@@ -310,7 +310,7 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o *Imp
     
 > 2.  No painel de menu esquerdo, selecionar **Containers**. Selecionar o conteiner **knowledge-store**.
     
->    [![Screenshot of the knowledge-store container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
+>    [![Screenshot of the knowledge-store container.](https://github.com/z3mafra/cognitive-search/blob/main/screens/10%20conteiners%20knoledge%20store.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/10%20conteiners%20knoledge%20store.jpg)
     
 > 3.  Selecionar qualquer um dos itens e clique no botão do arquivo **objectprojection.json**.
     
