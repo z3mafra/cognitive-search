@@ -280,9 +280,8 @@ No campo **JSON query editor** field, copiar e colar:
  
 > 3.  Selecionar **Search**. A consulta pesquisa todos os documentos sem índice e filtra revisões com localização em Chicago. Você deveria ver `3` no campo `@odata.count`.
     
-> 4.  Now let’s filter by sentiment. No **JSON query editor** field, copy and paste:
-    
-   
+> 4.  Agora, filtrar por sentimento. No campo **JSON query editor**, copiar e colar:
+  
 ~~~json
     {
      "search": "sentiment:'negative'",
@@ -323,17 +322,17 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o *Imp
 >     
 >    [![Screenshot of the storage blob breadcrumb.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 >        
-> 6.  No *Containers*, Selecionar the container  *coffee-skillset-image-projection*. Selecionar any of the items.   
+> 6.  No *Containers*, Selecionar o container *coffee-skillset-image-projection*. Selecionar qualquer um dos itens.   
     
 >    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
     
-> 7.  Selecionar any of the  *.jpg*  files. Selecionar **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
+> 7.  Selecionar qualquer um dos *.jpg*  files. Selecionar **Edit** para ver a imagem armazenada no documento. Todas as imagens dos documentos são armazenadas desta maneira.
     
 >    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
     
-> 8.  Selecionar the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
+> 8.  Selecionar a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar _Containers_ da conta de armazenamento (Storage account _Containers_).
     
-> 9.  Selecionar **Storage browser** on the left-hand panel, and Selecionar **Tables**. There’s a table for each entity no index. Selecionar the table  _coffeeSkillsetKeyPhrases_.
+> 9.  Selecionar **Storage browser** no painel esquerdo e selecionar **Tables**. Existe uma tabela para cada entidade sem índice. Selecionar a tabela _coffeeSkillsetKeyPhrases_.
     
 >    Observe as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo sem revisões. Muitos dos campos são chaves, portanto você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
 
