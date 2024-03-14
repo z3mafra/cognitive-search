@@ -303,31 +303,31 @@ No campo **JSON query editor** field, copiar e colar:
 ### 2.5. Revisão dos resultados salvos  
 
 
-Let’s see the power of the knowledge store in action. When you ran the  _Import data wizard_, you also created a knowledge store. Inside the knowledge store, you’ll find the enriched data extracted by AI skills persists no form of projections and tables.
+Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o *Import data wizard* (Assistente para importação de dados), também foi criou um armazenamento de conhecimento. Dentro do armazenamento de conhecimento, você encontrará os dados enriquecidos extraídos pelas habilidades de IA que persistem sem forma de projeções e tabelas.
 
-> 1.  No Azure portal, navigate back to your Azure storage account.
+> 1.  No Azure portal, navegue de volta para sua conta de armazenamento do Azure (Azure storage account).
     
-> 2.  No left-hand menu pane, Selecionar **Containers**. Selecionar the **knowledge-store** container.
+> 2.  No painel de menu esquerdo, selecionar **Containers**. Selecionar o conteiner **knowledge-store**.
     
 >    [![Screenshot of the knowledge-store container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
     
-> 3.  Selecionar any of the items, and then click the **objectprojection.json** file.
+> 3.  Selecionar qualquer um dos itens e clique no botão do arquivo **objectprojection.json**.
     
 >    [![Screenshot of the objectprojection.json.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
     
-> 4.  Selecionar **Edit** to see the JSON produced for one of the documents from your Azure data store.
+> 4.  Selecionar **Edit** para ver o JSON produzido para um dos documentos dos dados armazenados no Azure.
     
 >    [![Screenshot of how to find the edit button.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
     
-> 5.  Selecionar the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
+> 5.  Selecionar a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar à conta de armazenamento *Containers*.
 >     
 >    [![Screenshot of the storage blob breadcrumb.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
 >        
-> 6.  No  _Containers_, Selecionar the container  _coffee-skillset-image-projection_. Selecionar any of the items.   
+> 6.  No *Containers*, Selecionar the container  *coffee-skillset-image-projection*. Selecionar any of the items.   
     
 >    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
     
-> 7.  Selecionar any of the  _.jpg_  files. Selecionar **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
+> 7.  Selecionar any of the  *.jpg*  files. Selecionar **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
     
 >    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
     
@@ -335,7 +335,7 @@ Let’s see the power of the knowledge store in action. When you ran the  _Impor
     
 > 9.  Selecionar **Storage browser** on the left-hand panel, and Selecionar **Tables**. There’s a table for each entity no index. Selecionar the table  _coffeeSkillsetKeyPhrases_.
     
->    Look at the key phrases the knowledge store was able to capture from the content no reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
+>    Observe as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo sem revisões. Muitos dos campos são chaves, portanto você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
 
 --------
 ### 2.6. Insights e Possibilidades  
