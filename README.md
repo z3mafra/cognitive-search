@@ -377,12 +377,12 @@ Neste laboratório a documentção não recomenda excluir todos os recursos que 
 >    1. De volta ao portal do Azure (<https://portal.azure.com/>), selecionei o grupo de recursos _CogLabSearch_.  
 >    2. Clicar no recurso e selecionar _Excluir_ e depois _Sim_ para confirmar. O recurso foi excluído.
 >
--
+>
 #### Deletando o Storage account
 >    1. Voltando ao portal do Azure (<https://portal.azure.com/>), selecionei o grupo de recursos _cogsrchstg_.  
 >    2. Selecionei o recurso e depois _Excluir_ e _Sim_ para confirmar. O recurso foi excluído.
 >
--
+>
 >>  - **Observação:** Com todos os três recursos excluídos, a plataforma informou que houve consumo de recursos na ordem de R$ 0,55, restando ainda um crédito de R$ 987,63, na assinatura gratuita.
 >
 > 
