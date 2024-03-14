@@ -314,23 +314,23 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o *Imp
     
 > 3.  Selecionar qualquer um dos itens e clique no botão do arquivo **objectprojection.json**.
     
->    [![Screenshot of the objectprojection.json.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
+>    [![Screenshot of the objectprojection.json.](https://github.com/z3mafra/cognitive-search/blob/main/screens/11%20object%20json.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/11%20object%20json.jpg)
     
 > 4.  Selecionar **Edit** para ver o JSON produzido para um dos documentos dos dados armazenados no Azure.
     
->    [![Screenshot of how to find the edit button.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
+>    [![Screenshot of how to find the edit button.](https://github.com/z3mafra/cognitive-search/blob/main/screens/13%20home.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/13%20home.jpg)
     
 > 5.  Selecionar a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar à conta de armazenamento *Containers*.
 >     
->    [![Screenshot of the storage blob breadcrumb.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-4.png)
+>    [![Screenshot of the storage blob breadcrumb.](https://github.com/z3mafra/cognitive-search/blob/main/screens/14%20conteiner.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/14%20conteiner.jpg)
 >        
 > 6.  No *Containers*, Selecionar o container *coffee-skillset-image-projection*. Selecionar qualquer um dos itens.   
     
->    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
+>    [![Screenshot of the skillset container.
     
 > 7.  Selecionar qualquer um dos *.jpg*  files. Selecionar **Edit** para ver a imagem armazenada no documento. Todas as imagens dos documentos são armazenadas desta maneira.
     
->    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
+>    [![Screenshot of the saved image.](https://github.com/z3mafra/cognitive-search/blob/main/screens/15%20edit%20image.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/15%20edit%20image.jpg)
     
 > 8.  Selecionar a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar _Containers_ da conta de armazenamento (Storage account _Containers_).
     
