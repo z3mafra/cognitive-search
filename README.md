@@ -95,7 +95,7 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 >    - Aguarde a conclusão da implantação e visualize os detalhes da implantação.  
   
 --------
-### 2.1.3. Create a storage account  
+### 2.1.3. Criando uma conta de armazenamento (**Astorage account**)  
   
 >    - Return to the home page of the Azure portal, and then Selecionar the + Create a resource button.  
 >    - Search for storage account, and create a Storage account resource with the following settings:  
