@@ -362,15 +362,26 @@ Vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o *Imp
 --------
 --------
 ## 3. Fnalizar e Compartilhar o link do repositório  
-Antes de finalizar o desafio, uma providência importate é limpar (Clean up) o Language Studio, deletando os recrusos para não gerar custos desnecessários.
+Antes de finalizar o desafio, é importate limpar (Clean up) os recrusos na sua assinatura do Azure, deletando para não gerar custos desnecessários.
 
 ### **Clean up** 
-Como é recomendado na documentção, senão se pretende fazer mais exercícios, excluir todos os recursos que não precisa mais. Isso evita acumular custos desnecessários.  
+Neste laboratório a documentção não recomenda excluir todos os recursos que não serão mais utilizados. Porém, é importante fazer isso para evita acumular custos desnecessários. Foram criados três grupos de recusos: Azure AI Search, Azure AI services e Storage account.
 ‑
->    1. Abra o portal do Azure (<https://portal.azure.com/>) e selecione o grupo de recursos que contém o recurso que você criou.  
->    2. Selecione o recurso e selecione Excluir e depois Sim para confirmar. O recurso é então excluído.
+#### Deletando o Azure AI Search
+>    1. Abri o portal do Azure (<https://portal.azure.com/>) e selecionei o grupo de recursos _LabCogSearch_.  
+>    2. Clicar no recurso e selecionar _Excluir_ e depois _Sim_ para confirmar. O recurso foi excluído.
 >
->>  - **Observação:** Nesta etapa, a plataforma informou que houve consumo de recursos na ordem de R$ 0,55, restando ainda um crédito de R$ 987,63, na assinatura gratuita.
+#### Deletando o Azure AI services
+>    1. De volta ao portal do Azure (<https://portal.azure.com/>), selecionei o grupo de recursos _CogLabSearch_.  
+>    2. Clicar no recurso e selecionar _Excluir_ e depois _Sim_ para confirmar. O recurso foi excluído.
+>
+-
+#### Deletando o Storage account
+>    1. Voltando ao portal do Azure (<https://portal.azure.com/>), selecionei o grupo de recursos _cogsrchstg_.  
+>    2. Selecionei o recurso e depois _Excluir_ e _Sim_ para confirmar. O recurso foi excluído.
+>
+-
+>>  - **Observação:** Com todos os três recursos excluídos, a plataforma informou que houve consumo de recursos na ordem de R$ 0,55, restando ainda um crédito de R$ 987,63, na assinatura gratuita.
 >
 > 
 Após completar o Desafio, fiz a atualização no repositório local com o comando git pull.  
@@ -381,12 +392,14 @@ Após completar o Desafio, fiz a atualização no repositório local com o coman
 > No terminal digita o comando Git Pull <endereço do repositório remoto>
 
 ~~~bash
-$ git pull https://github.com/z3mafra/language-studio.git
+$ git pull https://github.com/z3mafra/cognitive-search.git
 ~~~
 
-### **Postar link do repositório**
-Como é recomendado na documentção, senão se pretende fazer mais exercícios, excluir todos os recursos que não precisa mais. Isso evita acumular custos desnecessários.  
->    1. Abra o portal da DIO (<https://www.dio.me/>), com as credenciais e selecione o [Bootcamp Microsoft AZure AI Fundamentals](https://web.dio.me/track/microsoft-azure-ai-fundamentals).
+### **Postar link do repositório**  
+
+Como é solicitado no enunciado do desafio, o link do GitHub deve ser compartilhado na plataforma da DIO. Para isso, segui os seguintes passos:
+>
+>     1. Abra o portal da DIO (<https://www.dio.me/>), com as credenciais e selecione o [Bootcamp Microsoft AZure AI Fundamentals](https://web.dio.me/track/microsoft-azure-ai-fundamentals).
 >    2. Entra na Atividade Desafio de projeto: "Reconhecimento Facial e transformação de imagens em Dados no Azure ML"
 >    3. Clica no botão "ENTREGAR PROJETO" 
 >    4. Cola o link do projeto na caixa de texto "Repositório do Projeto"; Cola a descrição do repositório; Ler e marcar o Check box "Termos de uso", concordando com os termos o recurso; e,
