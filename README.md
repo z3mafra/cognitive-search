@@ -113,13 +113,13 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 ### 2.2. Extrair dados de uma fonte  
 > ## Upload Documents to Azure Storage
 
-> 1.  No left-hand menu pane, Selecionar **Containers**.
+> 1.  No painel de menu à esquerda, selecionar **Containers**.
 
-[![Screenshot that shows the storage blob overview page.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)    
+[![[Screenshot that shows the storage blob overview page](https://github.com/z3mafra/cognitive-search/blob/main/screens/1%20Selecionar%20Containers.jpg).](https://github.com/z3mafra/cognitive-search/blob/main/screens/1%20Selecionar%20Containers.jpg)    
 
-> 2.  Selecionar **+ Container**. A pane on your right-hand side opens.
+> 2.  Selecionar **+ Container**. Um painel do seu lado direito é aberto.
     
-> 3.  Enter the following settings, and click **Create**:
+> 3.  Enter as seguintes configurações e clique em **Create**:
     -  **Name**: coffee-reviews
     -  **Public access level**: Container (anonymous read access for containers and blobs)
     -  **Advanced**:  _no changes_.
@@ -127,13 +127,13 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
     
 > 5.  No Azure portal, Selecionar your  _coffee-reviews_  container. No container, Selecionar **Upload**.    
     
- [![Screenshot that shows the storage container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)    
+ [[![[Screenshot that shows the storage container.](https://github.com/z3mafra/cognitive-search/blob/main/screens/2%20Selecionar%20%2B%20Container.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/2%20Selecionar%20%2B%20Container.jpg)   
     
 > 6.  No **Upload blob** pane, Selecionar **Select a file**.
     
 > 7.  No Explorer window, Selecionar **all** the files No  _reviews_  folder, Selecionar **Open**, and then Selecionar **Upload**.
         
-[![Screenshot that shows the files uploaded to the Azure container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)    
+[[![Screenshot that shows the files uploaded to the Azure container.](https://github.com/z3mafra/cognitive-search/blob/main/screens/3%20item%207%20%20Selecionar%20Upload.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/3%20item%207%20%20Selecionar%20Upload.jpg)    
     
 > 8.  After the upload is complete, you can close the **Upload blob** pane. Your documents are now in your  _coffee-reviews_  storage container.
 
@@ -144,7 +144,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 > 1.  No Azure portal, browse to your Azure AI Search resource. On the **Overview** page, Selecionar **Import data**.
     
-   [![Screenshot that shows the import data wizard.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)
+   [![Screenshot that shows the import data wizard.](https://github.com/z3mafra/cognitive-search/blob/main/screens/4%20import%20data.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/4%20import%20data.jpg)
     
 > 2.  On the **Connect to your data** page, no **Data Source** list, Selecionar **Azure Blob Storage**. Complete the data store details with the following values:
     -  **Data Source**: Azure Blob Storage
