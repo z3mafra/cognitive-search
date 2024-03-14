@@ -221,9 +221,15 @@ After you have the documents in storage, you can use Azure AI Search to extract 
     -   Extracts the document metadata fields and content from the data source.
     -   Runs the skillset of cognitive skills to generate more enriched fields.
     -   Maps the extracted fields to the index.
->    16.  Return to your Azure AI Search resource page. On the left pane, under  **Search Management**, select  **Indexers**. Select the newly created  **coffee-indexer**. Wait a minute, and select  **&orarr; Refresh**  until the  **Status**  indicates success.
+
+>[!NOTE]
+> Azure AI Search notification  
+> Import successfully configured, click here to monitor the indexer progress.  
+> When the indexer finishes execution, click here to here to start searching.  
+
+>    17.  Return to your Azure AI Search resource page. On the left pane, under  **Search Management**, select  **Indexers**. Select the newly created  **coffee-indexer**. Wait a minute, and select  **&orarr; Refresh**  until the  **Status**  indicates success.
 >        
->    17.  Select the indexer name to see more details.
+>    18.  Select the indexer name to see more details.
 >    
 >    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
     
