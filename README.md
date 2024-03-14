@@ -382,8 +382,9 @@ Como é recomendado na documentção, senão se pretende fazer mais exercícios,
 >    1. Abra o portal do Azure (<https://portal.azure.com/>) e selecione o grupo de recursos que contém o recurso que você criou.  
 >    2. Selecione o recurso e selecione Excluir e depois Sim para confirmar. O recurso é então excluído.
 >
->>  - **Observação:** Uma curiosidade que, nesta etapa, a plataforma informou que não houve consumo de recursos, restando ainda um crédito de R$ 988,18, na assinatura gratuita. Foi a mesma posição do último desafio no Azura, Vision Studio: Detect faces; Read text; e, Analyze images.  
-
+>>  - **Observação:** Nesta etapa, a plataforma informou que houve consumo de recursos na ordem de R$ 0,55, restando ainda um crédito de R$ 987,63, na assinatura gratuita.
+>
+> 
 Após completar o Desafio, fiz a atualização no repositório local com o comando git pull.  
 
 >- No repositório local;  
