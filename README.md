@@ -242,77 +242,61 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 --------
 ### 2.4. Consulta ao índice de pesquisa 
 
-Use the Search explorer to write and test queries. Search explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search explorer to write queries and review results in JSON.
+Use o Search Explorer para escrever e testar consultas. O explorador de pesquisa é uma ferramenta incorporada no portal do Azure que oferece uma maneira fácil de validar a qualidade do seu índice de pesquisa. Você pode usar o Search Explorer para escrever consultas e revisar resultados em JSON.
 
-> 1.  In your Search service’s  _Overview_  page, Selecionar **Search explorer** at the top of the screen.
+> 1.  Na página _Overview_ do seu serviço de pesquisa, selecione **Search Explorer** na parte superior da tela.
 >    
 >    [![Screenshot of how to find Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
     
-> 2.  Notice how the index selected is the  _coffee-index_  you created. Below the index selected, change the  _view_  to **JSON view**.
+> 2.  Observe como o índice selecionado é o _coffee-index_ que você criou. Abaixo do índice selecionado, altere _view_ para **JSON View**.
 >    
 >    [![Screenshot of the Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
     
 
 
-No **JSON query editor** field, copy and paste:
-
-CodeCopy
+No campo **JSON query editor** field, copiar e colar:
 
 ~~~json
 {
     "search": "*",
     "count": true
 }
-
 ~~~
 
 
-
-
-
-> 1.  Selecionar **Search**. The search query returns all the documents no search index, including a count of all the documents no **@odata.count** field. The search index should return a JSON document containing your search results.
+> 1.  Selecionar **Search**. TA consulta de pesquisa retorna todos os documentos sem índice de pesquisa, incluindo uma contagem de todos os documentos no campo **@odata.count**. O índice de pesquisa deve retornar um documento JSON contendo os resultados da pesquisa.
     
-> 2.  Now let’s filter by location. No **JSON query editor** field, copy and paste:
+> 2.  Agora filtrar por localização. No campo **JSON query editor**, copiar and colar:
     
-    CodeCopy
-    
+   
 ~~~json
     {
      "search": "locations:'Chicago'",
      "count": true
-    }
-    
+    } 
 ~~~
 
  
-> 3.  Selecionar **Search**. The query searches all the documents no index and filters for reviews with a Chicago location. You should see  `3`  no  `@odata.count`  field.
+> 3.  Selecionar **Search**. A consulta pesquisa todos os documentos sem índice e filtra revisões com localização em Chicago. Você deveria ver `3` no campo `@odata.count`.
     
 > 4.  Now let’s filter by sentiment. No **JSON query editor** field, copy and paste:
     
-    CodeCopy
-    
- ~~~json
+   
+~~~json
     {
      "search": "sentiment:'negative'",
      "count": true
     }
-    
-   ~~~
-
+~~~
 
    
-> 5.  Selecionar **Search**. The query searches all the documents no index and filters for reviews with a negative sentiment. You should see  `1`  no  `@odata.count`  field.
+> 5.  Selecionar **Search**. A consulta pesquisa todos os documentos sem índice e filtra revisões com sentimento negativo. Você deveria ver `1` no campo `@odata.count`.
     
-    > **Note** See how the results are sorted by  `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+>[!NOTE]
+> Veja como os resultados são classificados por `@search.score`. Esta é a pontuação atribuída pelo mecanismo de pesquisa para mostrar o quão próximos os resultados correspondem à consulta fornecida.
     
-> 6.  One of the problems we might want to solve for is why there might be certain reviews. Let’s take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
-
-
-
-
-
-
+> 6. Um dos problemas que podemos querer resolver é por que pode haver certas avaliações. Vamos dar uma olhada nas frases-chave associadas à avaliação negativa. O que você acha que pode ser a causa da revisão?
 
 
 --------
