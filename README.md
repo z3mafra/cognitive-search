@@ -113,65 +113,65 @@ A solução que você criará para o *Fourth Coffee* requer os seguintes recurso
 ### 2.2. Extrair dados de uma fonte  
 > ## Upload Documents to Azure Storage
 
-> 1.  No left-hand menu pane, Selecionar  **Containers**.
+> 1.  No left-hand menu pane, Selecionar **Containers**.
 
 [![Screenshot that shows the storage blob overview page.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-1.png)    
 
-> 2.  Selecionar  **+ Container**. A pane on your right-hand side opens.
+> 2.  Selecionar **+ Container**. A pane on your right-hand side opens.
     
-> 3.  Enter the following settings, and click  **Create**:
-    -   **Name**: coffee-reviews
-    -   **Public access level**: Container (anonymous read access for containers and blobs)
-    -   **Advanced**:  _no changes_.
+> 3.  Enter the following settings, and click **Create**:
+    -  **Name**: coffee-reviews
+    -  **Public access level**: Container (anonymous read access for containers and blobs)
+    -  **Advanced**:  _no changes_.
 > 4.  In a new browser tab, download the  [zipped coffee reviews](https://aka.ms/mslearn-coffee-reviews)  from  `https://aka.ms/mslearn-coffee-reviews`, and extract the files to the  _reviews_  folder.
     
-> 5.  No Azure portal, Selecionar your  _coffee-reviews_  container. No container, Selecionar  **Upload**.    
+> 5.  No Azure portal, Selecionar your  _coffee-reviews_  container. No container, Selecionar **Upload**.    
     
  [![Screenshot that shows the storage container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/storage-blob-3.png)    
     
-> 6.  No  **Upload blob**  pane, Selecionar  **Select a file**.
+> 6.  No **Upload blob** pane, Selecionar **Select a file**.
     
-> 7.  No Explorer window, Selecionar  **all**  the files No  _reviews_  folder, Selecionar  **Open**, and then Selecionar  **Upload**.
+> 7.  No Explorer window, Selecionar **all** the files No  _reviews_  folder, Selecionar **Open**, and then Selecionar **Upload**.
         
 [![Screenshot that shows the files uploaded to the Azure container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-container-upload-files.png)    
     
-> 8.  After the upload is complete, you can close the  **Upload blob**  pane. Your documents are now in your  _coffee-reviews_  storage container.
+> 8.  After the upload is complete, you can close the **Upload blob** pane. Your documents are now in your  _coffee-reviews_  storage container.
 
 --------
 ### 2.3. Enriquecer os dados com habilidades de IA: indexador no portal do Azure  
 
 After you have the documents in storage, you can use Azure AI Search to extract insights from the documents. The Azure portal provides an  _Import data wizard_. With this wizard, you can automatically create an index and indexer for supported data sources. You’ll use the wizard to create an index, and import your search documents from storage into the Azure AI Search index.
 
-> 1.  No Azure portal, browse to your Azure AI Search resource. On the  **Overview**  page, Selecionar  **Import data**.
+> 1.  No Azure portal, browse to your Azure AI Search resource. On the **Overview** page, Selecionar **Import data**.
     
    [![Screenshot that shows the import data wizard.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/azure-search-wizard-1.png)
     
-> 2.  On the  **Connect to your data**  page, no  **Data Source**  list, Selecionar  **Azure Blob Storage**. Complete the data store details with the following values:
-    -   **Data Source**: Azure Blob Storage
-    -   **Data source name**: coffee-customer-data
-    -   **Data to extract**: Content and metadata
-    -   **Parsing mode**: Default
-    -   **Connection string**: Selecionar  **Choose an existing connection**. Selecionar your storage account, Selecionar the  **coffee-reviews**  container, and then click  **Select**.
-    -   **Managed identity authentication**: None
-    -   **Container name**:  _this setting is auto-populated after you choose an existing connection_.
-    -   **Blob folder**:  _Leave this blank_.
-    -   **Description**: Reviews for Fourth Coffee shops.
-> 3.  Selecionar  **Next: Add cognitive skills (Optional)**.
+> 2.  On the **Connect to your data** page, no **Data Source** list, Selecionar **Azure Blob Storage**. Complete the data store details with the following values:
+    -  **Data Source**: Azure Blob Storage
+    -  **Data source name**: coffee-customer-data
+    -  **Data to extract**: Content and metadata
+    -  **Parsing mode**: Default
+    -  **Connection string**: Selecionar **Choose an existing connection**. Selecionar your storage account, Selecionar the **coffee-reviews** container, and then click **Select**.
+    -  **Managed identity authentication**: None
+    -  **Container name**:  _this setting is auto-populated after you choose an existing connection_.
+    -  **Blob folder**:  _Leave this blank_.
+    -  **Description**: Reviews for Fourth Coffee shops.
+> 3.  Selecionar **Next: Add cognitive skills (Optional)**.
     
-> 4.  No  **Attach Cognitive Services**  section, Selecionar your Azure AI services resource.
+> 4.  No **Attach Cognitive Services** section, Selecionar your Azure AI services resource.
     
-> 5.  No  **Add enrichments**  section:
->        -   Change the  **Skillset name**  to  **coffee-skillset**.
->        -   Selecionar the checkbox  **Enable OCR and merge all text into merged_content field**.
+> 5.  No **Add enrichments** section:
+>        -   Change the **Skillset name** to **coffee-skillset**.
+>        -   Selecionar the checkbox **Enable OCR and merge all text into merged_content field**.
     
-> **Note**  It’s important to Selecionar  **Enable OCR**  to see all of the enriched field options. 
+> **Note** It’s important to Selecionar **Enable OCR** to see all of the enriched field options. 
         
-  -   Ensure that the  **Source data field**  is set to  **merged_content**.
-  -   Change the  **Enrichment granularity level**  to  **Pages (5000 character chunks)**.
+  -   Ensure that the **Source data field** is set to **merged_content**.
+  -   Change the **Enrichment granularity level** to **Pages (5000 character chunks)**.
   -   Don’t Selecionar  _Enable incremental enrichment_
   -   Selecionar the following enriched fields:
       
-  | **Cognitive Skill**  | **Parameter**  |  **Field name** |
+  | **Cognitive Skill** | **Parameter** | **Field name** |
   |  ---------  |  ---------  |  ---------  |
   |   Extract location names    |              |   locations   |   
   |   Extract key phrases    |       |   keyphrases    |   
@@ -180,7 +180,7 @@ After you have the documents in storage, you can use Azure AI Search to extract 
   |   Generate captions from images    |       |   imageCaption    |   
 
 
-> 6.  Under  **Save enrichments to a knowledge store**, Selecionar:  
+> 6.  Under **Save enrichments to a knowledge store**, Selecionar:  
     
   -   Image projections
   -   Documents
@@ -191,45 +191,46 @@ After you have the documents in storage, you can use Azure AI Search to extract 
   -   Image references  
 --  
 
-  > **Note**  If a warning asking for a  **Storage Account Connection String**  appears.
+  > **Note** Se um alerta aparecer, perguntando por **Storage Account Connection String**.
   >   
   >   [![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)  
 >>  
->> a.  Selecionar  **Choose an existing connection**. Choose the storage account you created earlier.  
->> b.  Click on  **+ Container**  to create a new container called  **knowledge-store**  with the privacy level set to  **Private**, and Selecionar  **Create**.  
->> c.  Selecionar the  **knowledge-store**  container, and then click  **Select**  at the bottom of the screen.    
+>> a.  Selecionar **Choose an existing connection**. EScolha a conta de armazenamento (*storage account*) criada antes.  
+>> b.  Clicar em **+ Container** para criar um novo conteiner chamado **knowledge-store** com o nível de privacidade definido para **Private**, e Selecionar **Create**.  
+>> c.  Selecionar o conteiner **knowledge-store**, e então clicar **Select** na parte inferior da tela.    
 >   
 >    
->    8.  Selecionar  **Azure blob projections: Document**. A setting for  _Container name_  with the  _knowledge-store_  container auto-populated displays. Don’t change the container name.
+>    8.  Selecionar **Azure blob projections: Document**. Uma configuração para _Container name_ com as exibições preenchidas automaticamente do contêiner _knowledge-store_. Não altere o nome do contêiner.
 >    
->    9.  Selecionar  **Next: Customize target index**. Change the  **Index name**  to  **coffee-index**.
+>    9.  Selecionar **Next: Customize target index**. Mudar o **Index name** para **coffee-index**.
 >        
->    10.  Ensure that the  **Key**  is set to  **metadata_storage_path**. Leave  **Suggester name**  blank and  **Search mode**  autopopulated.
+>    10.  Certifique-se de que **Key** esteja definida como **metadata_storage_path**. Deixe **Sugerir nome** em branco e **Modo de pesquisa** preenchido automaticamente.
 >        
->    11.  Review the index fields’ default settings. Selecionar  **filterable**  for all the fields that are already selected by default.
->    
+>    11.  Revise as configurações padrão dos campos de índice. Selecionar **filterable** para todos os campos que já estão selecionados por padrão.
+>  
 >   [![Screenshot that shows the customize index pane with the index name entered and 'Filterable' selected for a default index field.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-customize-index.png)
 >    
->    11.  Selecionar  **Next: Create an indexer**.
->    12.  Change the  **Indexer name**  to  **coffee-indexer**.
+>    11.  Selecionar **Next: Create an indexer**.  
+>    12.  Mudar o **Indexer name** para **coffee-indexer**.  
 >    
->    13.  Leave the  **Schedule**  set to  **Once**.
+>    13.  Deixar o **Schedule** definido como **Once**.  
 >    
->    14.  Expand the  **Advanced options**. Ensure that the  **Base-64 Encode Keys**  option is selected, as encoding keys can make the index more efficient.
+>    14.  Expanda **Advanced options**. Certifique-se de que a opção **Base-64 Encode Keys** esteja selecionada, pois as chaves de codificação podem tornar o índice mais eficiente.  
 >    
->    15.  Selecionar  **Submit**  to create the data source, skillset, index, and indexer. The indexer is run automatically and runs the indexing pipeline, which:
-    -   Extracts the document metadata fields and content from the data source.
-    -   Runs the skillset of cognitive skills to generate more enriched fields.
-    -   Maps the extracted fields to the index.
+>    15.  Selecionar **Submit** para criar a fonte de dados, o conjunto de habilidades, o índice e o indexador. O indexador é executado automaticamente e executa o pipeline de indexação, que:
+>    - Extrai os campos de metadados do documento e o conteúdo da fonte de dados.  
+>    - Executa o conjunto de habilidades cognitivas para gerar campos mais enriquecidos.  
+>    - Mapeia os campos extraídos para o índice.  
+
 
 >[!NOTE]
 > Azure AI Search notification  
-> Import successfully configured, click here to monitor the indexer progress.  
-> When the indexer finishes execution, click here to here to start searching.  
+> Importação configurada com sucesso, clique aqui para monitorar o progresso do indexador..  
+> Quando o indexador terminar a execução, clique aqui para começar a pesquisar.  
 
->    17.  Return to your Azure AI Search resource page. On the left pane, under  **Search Management**, Selecionar  **Indexers**. Selecionar the newly created  **coffee-indexer**. Wait a minute, and Selecionar  **&orarr; Refresh**  until the  **Status**  indicates success.
+>    17.  Retorne à página de recursos do **Azure AI Search**. No painel esquerdo, em **Search Management**, Selecionar **Indexers**. Selecionar o recém-criado **coffee-indexer**. Espere um minuto e selecionar **Refresh** até o **Status** indicar "**success**".
 >        
->    18.  Selecionar the indexer name to see more details.
+>    18.  Selecionar o nome do "*indexer*" para ver mais detalhes.
 >    
 >    [![Screenshot that shows the coffee-indexer Indexer successfully created.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-search-indexer-success.png)
     
@@ -243,18 +244,18 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 
 Use the Search explorer to write and test queries. Search explorer is a tool built into the Azure portal that gives you an easy way to validate the quality of your search index. You can use Search explorer to write queries and review results in JSON.
 
-> 1.  In your Search service’s  _Overview_  page, Selecionar  **Search explorer**  at the top of the screen.
+> 1.  In your Search service’s  _Overview_  page, Selecionar **Search explorer** at the top of the screen.
 >    
 >    [![Screenshot of how to find Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/5-exercise-screenshot-7.png)
 
     
-> 2.  Notice how the index selected is the  _coffee-index_  you created. Below the index selected, change the  _view_  to  **JSON view**.
+> 2.  Notice how the index selected is the  _coffee-index_  you created. Below the index selected, change the  _view_  to **JSON view**.
 >    
 >    [![Screenshot of the Search explorer.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/search-explorer-query.png)
     
 
 
-No  **JSON query editor**  field, copy and paste:
+No **JSON query editor** field, copy and paste:
 
 CodeCopy
 
@@ -270,9 +271,9 @@ CodeCopy
 
 
 
-> 1.  Selecionar  **Search**. The search query returns all the documents no search index, including a count of all the documents no  **@odata.count**  field. The search index should return a JSON document containing your search results.
+> 1.  Selecionar **Search**. The search query returns all the documents no search index, including a count of all the documents no **@odata.count** field. The search index should return a JSON document containing your search results.
     
-> 2.  Now let’s filter by location. No  **JSON query editor**  field, copy and paste:
+> 2.  Now let’s filter by location. No **JSON query editor** field, copy and paste:
     
     CodeCopy
     
@@ -285,9 +286,9 @@ CodeCopy
 ~~~
 
  
-> 3.  Selecionar  **Search**. The query searches all the documents no index and filters for reviews with a Chicago location. You should see  `3`  no  `@odata.count`  field.
+> 3.  Selecionar **Search**. The query searches all the documents no index and filters for reviews with a Chicago location. You should see  `3`  no  `@odata.count`  field.
     
-> 4.  Now let’s filter by sentiment. No  **JSON query editor**  field, copy and paste:
+> 4.  Now let’s filter by sentiment. No **JSON query editor** field, copy and paste:
     
     CodeCopy
     
@@ -301,9 +302,9 @@ CodeCopy
 
 
    
-> 5.  Selecionar  **Search**. The query searches all the documents no index and filters for reviews with a negative sentiment. You should see  `1`  no  `@odata.count`  field.
+> 5.  Selecionar **Search**. The query searches all the documents no index and filters for reviews with a negative sentiment. You should see  `1`  no  `@odata.count`  field.
     
-    > **Note**  See how the results are sorted by  `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+    > **Note** See how the results are sorted by  `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
     
 > 6.  One of the problems we might want to solve for is why there might be certain reviews. Let’s take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
@@ -322,15 +323,15 @@ Let’s see the power of the knowledge store in action. When you ran the  _Impor
 
 > 1.  No Azure portal, navigate back to your Azure storage account.
     
-> 2.  No left-hand menu pane, Selecionar  **Containers**. Selecionar the  **knowledge-store**  container.
+> 2.  No left-hand menu pane, Selecionar **Containers**. Selecionar the **knowledge-store** container.
     
 >    [![Screenshot of the knowledge-store container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-0.png)
     
-> 3.  Selecionar any of the items, and then click the  **objectprojection.json**  file.
+> 3.  Selecionar any of the items, and then click the **objectprojection.json** file.
     
 >    [![Screenshot of the objectprojection.json.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-1.png)
     
-> 4.  Selecionar  **Edit**  to see the JSON produced for one of the documents from your Azure data store.
+> 4.  Selecionar **Edit** to see the JSON produced for one of the documents from your Azure data store.
     
 >    [![Screenshot of how to find the edit button.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-2.png)
     
@@ -342,13 +343,13 @@ Let’s see the power of the knowledge store in action. When you ran the  _Impor
     
 >    [![Screenshot of the skillset container.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-5.png)
     
-> 7.  Selecionar any of the  _.jpg_  files. Selecionar  **Edit**  to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
+> 7.  Selecionar any of the  _.jpg_  files. Selecionar **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
     
 >    [![Screenshot of the saved image.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/knowledge-store-blob-3.png)
     
 > 8.  Selecionar the storage blob breadcrumb at the top left of the screen to return to the Storage account  _Containers_.
     
-> 9.  Selecionar  **Storage browser**  on the left-hand panel, and Selecionar  **Tables**. There’s a table for each entity no index. Selecionar the table  _coffeeSkillsetKeyPhrases_.
+> 9.  Selecionar **Storage browser** on the left-hand panel, and Selecionar **Tables**. There’s a table for each entity no index. Selecionar the table  _coffeeSkillsetKeyPhrases_.
     
 >    Look at the key phrases the knowledge store was able to capture from the content no reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
 
@@ -376,7 +377,7 @@ Let’s see the power of the knowledge store in action. When you ran the  _Impor
 ## 3. Fnalizar e Compartilhar o link do repositório  
 Antes de finalizar o desafio, uma providência importate é limpar (Clean up) o Language Studio, deletando os recrusos para não gerar custos desnecessários.
 
-### **Clean up**  
+### **Clean up** 
 Como é recomendado na documentção, senão se pretende fazer mais exercícios, excluir todos os recursos que não precisa mais. Isso evita acumular custos desnecessários.  
 ‑
 >    1. Abra o portal do Azure (<https://portal.azure.com/>) e selecione o grupo de recursos que contém o recurso que você criou.  
