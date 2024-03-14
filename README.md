@@ -164,7 +164,8 @@ After you have the documents in storage, you can use Azure AI Search to extract 
 >        -   Change the **Skillset name** to **coffee-skillset**.
 >        -   Selecionar the checkbox **Enable OCR and merge all text into merged_content field**.
     
-> **Note** It’s important to Selecionar **Enable OCR** to see all of the enriched field options. 
+>[!NOTE]
+> It’s important to Selecionar **Enable OCR** to see all of the enriched field options. 
         
   -   Ensure that the **Source data field** is set to **merged_content**.
   -   Change the **Enrichment granularity level** to **Pages (5000 character chunks)**.
@@ -191,9 +192,10 @@ After you have the documents in storage, you can use Azure AI Search to extract 
   -   Image references  
 --  
 
-  > **Note** Se um alerta aparecer, perguntando por **Storage Account Connection String**.
+>[!NOTE]
+> Se um alerta aparecer, perguntando por **Storage Account Connection String**.
   >   
-  >   [![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/media/create-cognitive-search-solution/6a-azure-cognitive-search-enrichments-warning.png)  
+  >   [![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](https://github.com/z3mafra/cognitive-search/blob/main/screens/5%20warning.jpg)](https://github.com/z3mafra/cognitive-search/blob/main/screens/5%20warning.jpg)
 >>  
 >> a.  Selecionar **Choose an existing connection**. EScolha a conta de armazenamento (*storage account*) criada antes.  
 >> b.  Clicar em **+ Container** para criar um novo conteiner chamado **knowledge-store** com o nível de privacidade definido para **Private**, e Selecionar **Create**.  
